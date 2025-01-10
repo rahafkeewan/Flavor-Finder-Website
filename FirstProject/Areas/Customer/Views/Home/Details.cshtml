@@ -1,0 +1,68 @@
+﻿@model Product
+
+<form method="post">
+    <div class="card shadow border-0 my-5">
+        <div class="card-header bg-dark ml-0 py-3">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h3 class="text-white ">@Model.Title</h3>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="py-3">
+                <div class="row">
+                    <div class="col-6 col-md-2 offset-lg-1 pb-1">
+                        <a asp-action="Index" class="btn btn-outline-primary bg-gradient mb-5 fw-semibold btn-sm text-uppercase">
+                            <small>Back to home</small>
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-lg-3 offset-lg-1 text-center mb-3">
+                        <img src="@Model.ImageUrl" width="100%" class="rounded" />
+                    </div>
+                    <div class="col-12 col-lg-6 offset-lg-1">
+
+                        
+                        <div class="row text-center ps-2">
+                            <div class="col-3 col-lg-3 bg-white border-bottom">
+                                <div class="text-dark text-opacity-50 fw-semibold">
+                                    @Model.Category.Name
+                                </div>
+                            </div>
+                            <div class="p-1 col-3 col-lg-2 bg-white border-bottom">
+                                <div class="text-dark text-opacity-50 fw-semibold">Arabic Food</div>
+                            </div>
+                            <div class="p-1 col-3 col-lg-2 bg-white border-bottom">
+                                <div class="text-dark text-opacity-50 fw-semibold">Healthy</div>
+                            </div>
+                            <div class="p-1 col-3 col-lg-2 bg-white border-bottom">
+                                <div class="text-dark text-opacity-50 fw-semibold">Nutritious</div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row pl-2 my-3">
+                            <div class="col-7 bg-white text-warning fw-bold">
+                                <h2>How To Prepare:</h2>
+                            </div>
+                        </div>
+                        <div class="row pl-2 my-3">
+                            <p class="text-secondary lh-sm">@Html.Raw(Model.Description)</p>
+                        </div>
+                        <div class="row">
+                            <div class="row pl-2 my-3 col-6 col-md-3">
+                                <a href="https://www.youtube.com/@@emtyaz_aljeetawy/featured"
+                                   target = "_blank"
+                                   class="btn btn-primary bg-gradient  w-100 py-2 text-uppercase fw-semibold">
+                                    Video Tutorial
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
